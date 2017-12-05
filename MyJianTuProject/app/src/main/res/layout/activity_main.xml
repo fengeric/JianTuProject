@@ -10,6 +10,13 @@
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_book_chapter_names"
+        android:hint="目录(一行一个)"
+        android:gravity="left"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="180dp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"

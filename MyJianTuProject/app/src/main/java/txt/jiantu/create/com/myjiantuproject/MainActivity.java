@@ -26,6 +26,7 @@ import txt.jiantu.create.com.myjiantuproject.util.ToastManager;
 
 public class MainActivity extends AppCompatActivity {
     private EditText et_book_title;//书名
+    private EditText et_book_chapter_names;//章名
     private EditText et_book_chapter_num;//多少章/回
     private EditText et_book_chapter_unit;//章/回单位
     private EditText et_book_content_line_num;//1回中多少行概要
@@ -39,18 +40,12 @@ public class MainActivity extends AppCompatActivity {
     private int good_sentence_line_num = 0;//1回中多少行概好句
 
     private int[] arr;//创建一个输入的章节数目长度的数组
+    private String[] chapter_names;//用来放章名
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        /*String s = "1234567890";
-
-        Pattern p = Pattern.compile("/(\\d{4})/g");
-        s = s.replaceAll("/(\\d{4})/g", "$0" + ",");
-
-        LogUtil.v(getClass(), "onCreate---" + "s:" + s);*/
 
         initView();
     }
@@ -62,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             et_book_chapter_unit = (EditText) findViewById(R.id.et_book_chapter_unit);
             et_book_content_line_num = (EditText) findViewById(R.id.et_book_content_line_num);
             et_book_good_sentence_line_num = (EditText) findViewById(R.id.et_book_good_sentence_line_num);
+            et_book_chapter_names = (EditText) findViewById(R.id.et_book_chapter_names);
         } catch (Exception e) {
           LogUtil.e(getClass(), "initView", e);
         }
@@ -102,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
             content_line_num = Integer.parseInt(et_book_content_line_num.getText().toString());
             good_sentence_line_num = Integer.parseInt(et_book_good_sentence_line_num.getText().toString());
             arr = new int[book_chapter_num];//创建一个输入的章节数目长度的数组
+            chapter_names = et_book_chapter_names.getText().toString().split("\r|\n");
             // 下载文件
             permissionHelper = PermissionHelper.getInstance(this, new OnPermissionCallback() {
                 @Override
@@ -144,7 +141,8 @@ public class MainActivity extends AppCompatActivity {
                                             "!!第" + (aryItem[j] + 1) + book_unit + " " + "\r\n" +
                                             getString(content_line_num, good_sentence_line_num);
                                 }*/
-                                String s = "!!第" + (aryItem[j] + 1) + book_unit + " " + "\r\n" +
+                                String chapter_name = chapter_names.length >= (aryItem[j] + 1) ? chapter_names[aryItem[j]] : "";
+                                String s = "!!第" + (aryItem[j] + 1) + book_unit + " " + chapter_name + "\r\n" +
                                         getString(content_line_num, good_sentence_line_num);
                                 content = (TextUtils.isEmpty(content)) ? s : content + "\r\n" + s;
                             }

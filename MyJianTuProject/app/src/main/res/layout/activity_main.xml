@@ -20,7 +20,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:weightSum="2"
+        android:weightSum="3"
         android:layout_height="wrap_content">
         <EditText
             android:id="@+id/et_book_chapter_num"
@@ -35,6 +35,14 @@
             android:hint="单位(章/回？)"
             android:layout_weight="1"
             android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_book_chaps_for_a_text"
+            android:hint="几章/回生成一个文本"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>

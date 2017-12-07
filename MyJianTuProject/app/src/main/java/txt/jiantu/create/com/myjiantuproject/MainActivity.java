@@ -22,6 +22,7 @@ import txt.jiantu.create.com.myjiantuproject.per.PermissionHelper;
 import txt.jiantu.create.com.myjiantuproject.util.LogUtil;
 import txt.jiantu.create.com.myjiantuproject.util.OnPermissionCallback;
 import txt.jiantu.create.com.myjiantuproject.util.ToastManager;
+import txt.jiantu.create.com.myjiantuproject.util.ZipTest;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText et_book_chapter_unit;//章/回单位
     private EditText et_book_content_line_num;//1回中多少行概要
     private EditText et_book_good_sentence_line_num;//1回中多少行概好句
+    private EditText et_book_chaps_for_a_text;//几个章/回生成一个text
     public final String sdPath = Environment.getExternalStorageDirectory()
             .getAbsolutePath() + "/AAmyJianTu";
     private PermissionHelper permissionHelper;
@@ -38,9 +40,11 @@ public class MainActivity extends AppCompatActivity {
     private int book_chapter_num = 0;// 书的章节数量
     private int content_line_num = 0;// 1回中多少行概要
     private int good_sentence_line_num = 0;//1回中多少行概好句
+    private int a_text_has_chaps = 0;// 1个文本中含有几个章/回
 
     private int[] arr;//创建一个输入的章节数目长度的数组
     private String[] chapter_names;//用来放章名
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
             et_book_content_line_num = (EditText) findViewById(R.id.et_book_content_line_num);
             et_book_good_sentence_line_num = (EditText) findViewById(R.id.et_book_good_sentence_line_num);
             et_book_chapter_names = (EditText) findViewById(R.id.et_book_chapter_names);
+            et_book_chaps_for_a_text = (EditText) findViewById(R.id.et_book_chaps_for_a_text);
         } catch (Exception e) {
           LogUtil.e(getClass(), "initView", e);
         }
@@ -99,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
             good_sentence_line_num = Integer.parseInt(et_book_good_sentence_line_num.getText().toString());
             arr = new int[book_chapter_num];//创建一个输入的章节数目长度的数组
             chapter_names = et_book_chapter_names.getText().toString().split("\r|\n");
+            a_text_has_chaps = Integer.parseInt(et_book_chaps_for_a_text.getText().toString());
             // 下载文件
             permissionHelper = PermissionHelper.getInstance(this, new OnPermissionCallback() {
                 @Override
@@ -128,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
                             arr[i] = i;
                         }
 
-                        Object[] subAry = splitAry(arr, 10);//分割后的子块数组
+                        Object[] subAry = splitAry(arr, a_text_has_chaps);//分割后的子块数组
                         for (int i = 0; i < subAry.length; i++) {
                             int[] aryItem = (int[]) subAry[i];
                             String content = "";
@@ -149,6 +155,14 @@ public class MainActivity extends AppCompatActivity {
                             content = "!概要" + "\r\n" + content;
                             createTextFile(book_path, book_title + "内容概要" + (aryItem[0] + 1) + "到" + (aryItem[aryItem.length - 1] + 1) + book_unit, content);
                         }
+
+                        //zip
+                        ZipTest.ZipMultiFile(book_path, book_path + ".zip");
+                        /*try {
+                            ZipUtils.zip(book_path, book_path + ".zip");
+                        } catch (Exception e) {
+                          LogUtil.e(getClass(), "onPermissionGranted-zip", e);
+                        }*/
                     }
                 }
 
@@ -166,6 +180,8 @@ public class MainActivity extends AppCompatActivity {
           LogUtil.e(getClass(), "btnCreate", e);
         }
     }
+
+
 
     /**@title 根据写入的内容的行数、好句的行数，返回一串字符串
      * @params 

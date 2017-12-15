@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox cb;//是否生成交叉型概要单选框
     private boolean isCbChecked = false;// 默认不生成交叉型概要
 
+    private CheckBox cbXMind;//是否生成xmind文件
+    private boolean isCbXMindChecked = false;// 默认不生成xmind文件
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +81,19 @@ public class MainActivity extends AppCompatActivity {
                         isCbChecked = true;
                     }else{
                         isCbChecked = false;
+                    }
+                }
+            });
+
+            cbXMind = (CheckBox) findViewById(R.id.cb_xmind);
+
+            cbXMind.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if(isChecked){
+                        isCbXMindChecked = true;
+                    }else{
+                        isCbXMindChecked = false;
                     }
                 }
             });
@@ -333,7 +349,8 @@ public class MainActivity extends AppCompatActivity {
      **/
     private void createTextFile(String textPath, String textName, String textContent){
         try {
-            File fileName = new File(textPath, "/" + textName + ".txt"); // 相对路径，如果没有则要建立一个新的output。txt文件
+            String ss = isCbXMindChecked ? ".xmind" : ".txt";
+            File fileName = new File(textPath, "/" + textName + ss); // 相对路径，如果没有则要建立一个新的output。txt文件
 
             if(fileName.exists())
                 fileName.delete();

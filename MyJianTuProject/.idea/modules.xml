@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyJianTuProject.iml" filepath="$PROJECT_DIR$/MyJianTuProject.iml" />
+      <module fileurl="file://D:\MySpace\myCode\JianTuProject\MyJianTuProject\MyJianTuProject.iml" filepath="D:\MySpace\myCode\JianTuProject\MyJianTuProject\MyJianTuProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\MySpace\myCode\JianTuProject\MyJianTuProject\app\app.iml" filepath="D:\MySpace\myCode\JianTuProject\MyJianTuProject\app\app.iml" />
     </modules>
   </component>
 </project>

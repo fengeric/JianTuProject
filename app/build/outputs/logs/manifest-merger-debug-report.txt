@@ -1,0 +1,85 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:2:1-29:12
+	package
+		ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:3:5-40
+		INJECTED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml
+		INJECTED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml
+		INJECTED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml
+		INJECTED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:5:5-81
+	android:name
+		ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:5:22-78
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:8:5-84
+	android:name
+		ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:8:22-81
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:9:22-77
+application
+ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:13:1-27:19
+MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\Administrator\.android\build-cache\b8dc06ef731fd58139eddf73b169de46b5214a61\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Administrator\.android\build-cache\b6de1fb33c579323255dcc37f402819e49887fae\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Administrator\.android\build-cache\405ec9c7f2934249a2e64e887506b30c9e694394\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Administrator\.android\build-cache\0bed91570570a390260ec1ba90b4593b8c2d4f3c\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Administrator\.android\build-cache\08b018d9e49edfce585c5d93d1a7a107badada5e\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Administrator\.android\build-cache\f038b7f6d013ae49e3198489edbffe556d29c37e\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\Administrator\.android\build-cache\f0e5574fc4679d70b1b19d399e9fc9c02bfd751c\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\Administrator\.android\build-cache\c5579bb334ffc57894c8b70c334c1296f0e5738b\output\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Administrator\.android\build-cache\22e27ce4389aa2da397df0e5d8c4d9693f279225\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Administrator\.android\build-cache\55eeeb7cef04f3304dc7647e52b4369af31c3898\output\AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:16:9-41
+	android:supportsRtl
+		ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:18:9-35
+	android:roundIcon
+		ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:17:9-42
+	android:allowBackup
+		ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:14:9-35
+	android:icon
+		ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:15:9-37
+	android:theme
+		ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:19:9-40
+activity#txt.jiantu.create.com.txt.MainActivity
+ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:20:9-26:20
+	android:name
+		ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:20:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:21:13-25:29
+action#android.intent.action.MAIN
+ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:22:17-69
+	android:name
+		ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:22:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:24:17-77
+	android:name
+		ADDED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml:24:27-74
+uses-sdk
+INJECTED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\Administrator\.android\build-cache\b8dc06ef731fd58139eddf73b169de46b5214a61\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Administrator\.android\build-cache\b6de1fb33c579323255dcc37f402819e49887fae\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Administrator\.android\build-cache\405ec9c7f2934249a2e64e887506b30c9e694394\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Administrator\.android\build-cache\0bed91570570a390260ec1ba90b4593b8c2d4f3c\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Administrator\.android\build-cache\08b018d9e49edfce585c5d93d1a7a107badada5e\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Administrator\.android\build-cache\f038b7f6d013ae49e3198489edbffe556d29c37e\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\Administrator\.android\build-cache\f0e5574fc4679d70b1b19d399e9fc9c02bfd751c\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\Administrator\.android\build-cache\c5579bb334ffc57894c8b70c334c1296f0e5738b\output\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Administrator\.android\build-cache\22e27ce4389aa2da397df0e5d8c4d9693f279225\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Administrator\.android\build-cache\55eeeb7cef04f3304dc7647e52b4369af31c3898\output\AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.2.0] C:\Users\Administrator\.android\build-cache\b8dc06ef731fd58139eddf73b169de46b5214a61\output\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml
+		INJECTED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml
+		INJECTED from D:\MySpace\myCode\JianTuProject\app\src\main\AndroidManifest.xml

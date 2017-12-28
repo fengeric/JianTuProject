@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_book_title"
+        android:hint="书名"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et_book_chapter_num"
+            android:hint="多少回/多少章"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_book_chapter_unit"
+            android:hint="单位(章/回？)"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et_book_content_line_num"
+            android:hint="1回中多少行概要"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_book_good_sentence_line_num"
+            android:hint="1回中多少行好句"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="创建文件夹并生成关系图及概要txt"
+        android:onClick="btnCreate"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:text="打开文件管理器"
+        android:visibility="gone"
+        android:onClick="btnToMyJianTu"
+        android:layout_height="wrap_content" />
+</LinearLayout>

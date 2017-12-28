@@ -71,13 +71,6 @@
 
     <CheckBox
         android:layout_gravity="center"
-        android:id="@+id/cb"
-        android:checked="false"
-        android:text="是否生成交叉型概要"
-        android:layout_width="match_parent"
-        android:layout_height="40dp" />
-    <CheckBox
-        android:layout_gravity="center"
         android:id="@+id/cb_xmind"
         android:checked="false"
         android:text="是否生.xmind文件"

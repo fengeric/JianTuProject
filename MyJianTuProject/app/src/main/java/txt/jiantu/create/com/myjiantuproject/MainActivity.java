@@ -47,9 +47,6 @@ public class MainActivity extends AppCompatActivity {
     private int[] arr;//创建一个输入的章节数目长度的数组
     private String[] chapter_names;//用来放章名
 
-    private CheckBox cb;//是否生成交叉型概要单选框
-    private boolean isCbChecked = false;// 默认不生成交叉型概要
-
     private CheckBox cbXMind;//是否生成xmind文件
     private boolean isCbXMindChecked = false;// 默认不生成xmind文件
 
@@ -71,19 +68,6 @@ public class MainActivity extends AppCompatActivity {
             et_book_good_sentence_line_num = (EditText) findViewById(R.id.et_book_good_sentence_line_num);
             et_book_chapter_names = (EditText) findViewById(R.id.et_book_chapter_names);
             et_book_chaps_for_a_text = (EditText) findViewById(R.id.et_book_chaps_for_a_text);
-
-            cb = (CheckBox) findViewById(R.id.cb);
-
-            cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if(isChecked){
-                        isCbChecked = true;
-                    }else{
-                        isCbChecked = false;
-                    }
-                }
-            });
 
             cbXMind = (CheckBox) findViewById(R.id.cb_xmind);
 
@@ -240,15 +224,7 @@ public class MainActivity extends AppCompatActivity {
             if (TextUtils.isEmpty(s1)) {
                 s1 = "!!!!.";
             } else {
-                if (isCbChecked) {
-                    if (isOdd(i)) {
-                        s1 = s1 + "\r\n" + "!!!!(→)" + "\r\n" + "!!!!!.";
-                    } else {
-                        s1 = s1 + "\r\n" + "!!!!.";
-                    }
-                } else {
-                    s1 = s1 + "\r\n" + "!!!!.";
-                }
+                s1 = s1 + "\r\n" + "!!!!.";
             }
         }
         return s1;

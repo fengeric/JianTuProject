@@ -171,6 +171,11 @@ public class MainActivity extends AppCompatActivity {
                                         getString(content_line_num, good_sentence_line_num);
                                 content = (TextUtils.isEmpty(content)) ? s : content + "\r\n" + s;
                             }
+
+                            if (isCbXMindChecked) {
+                                content = content.replace("!", "\t");
+                            }
+
                             //content = "!概要" + "\r\n" + content;
                             createTextFile(book_path, book_title + "内容概要" + (aryItem[0] + 1) + "到" + (aryItem[aryItem.length - 1] + 1) + book_unit, content);
                         }
@@ -326,8 +331,7 @@ public class MainActivity extends AppCompatActivity {
      **/
     private void createTextFile(String textPath, String textName, String textContent){
         try {
-            String ss = isCbXMindChecked ? ".xmind" : ".txt";
-            File fileName = new File(textPath, "/" + textName + ss); // 相对路径，如果没有则要建立一个新的output。txt文件
+            File fileName = new File(textPath, "/" + textName + ".txt"); // 相对路径，如果没有则要建立一个新的output。txt文件
 
             if(fileName.exists())
                 fileName.delete();

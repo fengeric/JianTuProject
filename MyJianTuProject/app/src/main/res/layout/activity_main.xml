@@ -73,7 +73,7 @@
         android:layout_gravity="center"
         android:id="@+id/cb_xmind"
         android:checked="false"
-        android:text="是否生.xmind文件"
+        android:text="是否生xmind形式内容(\\t)"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
 

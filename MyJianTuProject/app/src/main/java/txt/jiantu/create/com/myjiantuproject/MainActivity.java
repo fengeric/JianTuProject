@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
     private int[] arr;//创建一个输入的章节数目长度的数组
     private String[] chapter_names;//用来放章名
 
-    private CheckBox cbXMind;//是否生成xmind文件
-    private boolean isCbXMindChecked = false;// 默认不生成xmind文件
+//    private CheckBox cbXMind;//是否生成xmind文件
+//    private boolean isCbXMindChecked = false;// 默认不生成xmind文件
 
 
     @Override

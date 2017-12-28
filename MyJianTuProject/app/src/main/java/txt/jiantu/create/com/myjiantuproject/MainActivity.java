@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
     private int[] arr;//创建一个输入的章节数目长度的数组
     private String[] chapter_names;//用来放章名
 
-//    private CheckBox cbXMind;//是否生成xmind文件
-//    private boolean isCbXMindChecked = false;// 默认不生成xmind文件
+    private CheckBox cbXMind;//是否生成xmind文件
+    private boolean isCbXMindChecked = false;// 默认不生成xmind文件
 
 
     @Override
@@ -144,7 +144,8 @@ public class MainActivity extends AppCompatActivity {
                         delAllFile(book_path);
 
                         //创建txt人物关系图
-                        String people_relation_txt_content = "!" + book_title + "\r\n" + "!!.";
+                        //String people_relation_txt_content = "!" + book_title + "\r\n" + "!!.";
+                        String people_relation_txt_content = "!.";
                         createTextFile(book_path, book_title + "人物关系", people_relation_txt_content);
 
                         //创建内容概要txt文件
@@ -166,11 +167,11 @@ public class MainActivity extends AppCompatActivity {
                                             getString(content_line_num, good_sentence_line_num);
                                 }*/
                                 String chapter_name = chapter_names.length >= (aryItem[j] + 1) ? chapter_names[aryItem[j]] : "";
-                                String s = "!!第" + (aryItem[j] + 1) + book_unit + " " + chapter_name + "\r\n" +
+                                String s = "!第" + (aryItem[j] + 1) + book_unit + " " + chapter_name + "\r\n" +
                                         getString(content_line_num, good_sentence_line_num);
                                 content = (TextUtils.isEmpty(content)) ? s : content + "\r\n" + s;
                             }
-                            content = "!概要" + "\r\n" + content;
+                            //content = "!概要" + "\r\n" + content;
                             createTextFile(book_path, book_title + "内容概要" + (aryItem[0] + 1) + "到" + (aryItem[aryItem.length - 1] + 1) + book_unit, content);
                         }
 
@@ -208,9 +209,9 @@ public class MainActivity extends AppCompatActivity {
     private String getString(int contentLineNum, int goodSentenceLineNum){
         String s = "";
         try {
-            s = "!!!概况" + "\r\n" +
+            s = "!!概况" + "\r\n" +
                     returnContentString(contentLineNum) + "\r\n" +
-                    "!!!好句" + "\r\n" +
+                    "!!好句" + "\r\n" +
                     returnContentString(goodSentenceLineNum);
         } catch (Exception e) {
           LogUtil.e(getClass(), "getString", e);
@@ -222,9 +223,9 @@ public class MainActivity extends AppCompatActivity {
         String s1 = "";
         for (int i = 0; i < lineNum; i++) {
             if (TextUtils.isEmpty(s1)) {
-                s1 = "!!!!.";
+                s1 = "!!!.";
             } else {
-                s1 = s1 + "\r\n" + "!!!!.";
+                s1 = s1 + "\r\n" + "!!!.";
             }
         }
         return s1;
